@@ -1,0 +1,159 @@
+  
+body{
+    font-family: 'Alegreya Sans SC', sans-serif; 
+    background-image: url('../images/concrete_seamless.png') #f1f1f1;
+  }
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_item a:visited{
+    color:#1300ED;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 450px;
+    /* flex-direction: column; */   
+   
+}
+
+.card > header{
+    background: #288080;
+    border: 2px solid #45ADAD;
+    padding: 20px 0;
+    border-radius: 7px 7px 0 0;
+}
+
+.gallery{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+.gallery > img{
+    border: 10px #50C7C7 solid;
+    margin: 10px;
+    width: 300px;
+}
+
+@-webkit-keyframes logo-animate {
+    from {width: 50px; opacity: 0;}
+    to {width:425px; opacity:1;}
+    
+}
+
+@-moz-keyframes logo-animate {
+    from {width: 50px; opacity: 0;}
+    to {width:425px; opacity:1;}
+    
+}
+
+@-o-keyframes logo-animate {
+    from {width: 50px; opacity: 0;}
+    to {width:425px; opacity:1;}
+    
+}
+
+@keyframes logo-animate{
+    from {width: 50px; opacity: 0;}
+    to {width:425px; opacity:1;}
+}
+
+#logo {
+    -webkit-animation-name: logo-animate ; /* Safari 4+ */
+    -moz-animation-name:    logo-animate ; /* Fx 5+ */
+    -o-animation-name:      logo-animate ; /* Opera 12+ */
+    animation-name:         logo-animate ; /* IE 10+, Fx 29+ */
+  
+    -webkit-animation-duration: 5s ; /* Safari 4+ */
+    -moz-animation-duration:    5s ; /* Fx 5+ */
+    -o-animation-duration:      5s ; /* Opera 12+ */
+    animation-duration:         5s ; /* IE 10+, Fx 29+ */
+  
+    -webkit-animation-iteration-count: 1 ; /* Safari 4+ */
+    -moz-animation-iteration-count:    1 ; /* Fx 5+ */
+    -o-animation-iteration-count:      1 ; /* Opera 12+ */
+    animation-iteration-count:         1 ; /* IE 10+, Fx 29+ */
+}
+
+@media screen and (min-width: 850px){
+
+
+    header{
+        
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+      }
+
+    
+      .nav_links{
+        flex-direction: row;
+        align-self: flex-end;
+    
+      }
+
+      /* header:nth-child(2){
+        flex: 1 0 auto;
+    } */
+
+    .pricing {
+        flex-direction: row;
+      }
+      /* Cards! */
+      .card {
+      flex-direction: row;
+      width: 250px;
+    
+      }
+
+
+    }
+
+    @media screen and (prefers-reduced-motion: reduce){
+        #logo{
+          -webkit-animation: none;
+          animation: none;
+        }
+      }
+
+    @media print {
+        body {
+          background: none;
+        }
+        .card {
+          flex-basis: 250px;
+          border: 2px #45ADDD solid;
+        }
+        .pricing {
+          flex-direction: row;
+        }
+
+        .nav_links{
+            justify-content:space-between;
+        }
+
+        .gallery, #gallery {
+          display: none;
+        }
+      }
