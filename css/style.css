@@ -148,7 +148,7 @@ header{
     /* @media screen and (min-width: 1000px){ */
 
         body {
-          background: none;
+          background-image: none;
         }
         .card {
           flex-basis: 250px;
